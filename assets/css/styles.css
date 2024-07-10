@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    width: 800px;
+    height: 600px;
+
+}
+
+.menu{
+    width: 800px;
+    height: 33px;
+    border: 1px solid red;
+}
