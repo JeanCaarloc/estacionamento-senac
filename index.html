@@ -6,47 +6,76 @@
     <title>Sistema de Estacionamento</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Irish Grover' rel='stylesheet'>
-    <script src="./assets/js/estacionamento.js"></script>
 </head>
 <body>
-  <div id="conteiner"> 
-    <div class="menu">
-      <div>
-        <ul class="menu-esquerdo">
-          <li >
-            <img class="logo" src="./assets/images/img-logo.png" alt="">
-          </li>
-          <li class="menu-nome">
-            <p>Menu</p>
-          </li>
-          <li class="titulo">
-            FlowPark
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul class="menu-direito">
-          <li>
-            <input type="text" class="buscar" placeholder="Busca">
-            <a href="#"><img class="buscar-icon" src="./assets/images/lupa.png"></a>
-          </li>
-          <li class="login">
-            Login
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="veiculos">
+    <div id="conteiner"> 
+        <div class="menu">
+            <div>
+                <ul class="menu-esquerdo">
+                    <li>
+                        <img class="logo" src="./assets/images/img-logo.png" alt="">
+                    </li>
+                    <li class="menu-nome">
+                        <p>Menu</p>
+                    </li>
+                    <li class="titulo">
+                        FlowPark
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="menu-direito">
+                    <li>
+                        <input type="text" class="buscar" placeholder="Busca">
+                        <a href="#"><img class="buscar-icon" src="./assets/images/img-lupa.png"></a>
+                    </li>
+                    <li class="login">
+                        Login
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="veiculos">
+            <img class="carros vehicle" id="carro" src="./assets/images/img-carro.png" alt="Carro">
+            <img class="moto vehicle" id="moto" src="./assets/images/img-moto.png" alt="Moto">
+            <img class="van-bau vehicle" id="van-bau" src="./assets/images/img-bau.png" alt="Van-Bau">
+            <img class="treiller-foodtruck vehicle" id="food-truck" src="./assets/images/img-trailler.png" alt="Food Truck">
+            <div class="small-window" id="small-window">
+                <h3>Escolha o tipo de custo:</h3>
+                <button class="option-btn" data-value="daily">Custo por Diária</button>
+                <button class="option-btn" data-value="hourly">Custo por Hora</button>
+            </div>
+        </div>
+        <div class="formulario">
 
+          <form id="form1">
+            <label for="placa">Placa</label> <p>
+            <input type="text" id="placa" placeholder="___-___">
+          </form>
+
+          <form id="form2">
+            <label for="tarifa">Tarifa</label> <p>
+            <input type="text" id="tarifa" placeholder="">
+          </form>
+
+          <form id="form3">
+            <label for="obseracoes">Observações</label> <p>
+            <input type="text" id="observacoes" placeholder="">
+          </form>
+          
+        </div>
+        <div class="input-vagas">
+          <button type="button"> Cadastrar</button>
+          <label for="quantidade-vagas">Vagas</label>
+          <input type="text" id="vagas">
+        </div>
+        <div class="tabela"></div>      
+        <div class="rodape">
+            <div class="parceiros"></div>
+            <div class="endereco"></div>
+            <div class="sobre"></div>
+        </div>
     </div>
-    <div class="formulario"></div>
-    <div class="tabela"></div>
-    <div class="input-vagas"></div>
-    <div class="rodape">
-      <div class="parceiros"></div>
-      <div class="endereco"></div>
-      <div class="sobre"></div>
-    </div>
-  </div>
+    <script src="./assets/js/estacionamento.js"></script>
 </body>
 </html>
