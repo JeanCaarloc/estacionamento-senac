@@ -26,11 +26,11 @@
             <div>
                 <ul class="menu-direito">
                     <li>
-                        <input type="text" class="buscar" placeholder="Busca">
                         <a href="#"><img class="buscar-icon" src="./assets/images/img-lupa.png"></a>
+                        <input type="text" class="buscar" placeholder="Busca">
                     </li>
                     <li class="login">
-                        Login
+                        <p>Login</p>
                     </li>
                 </ul>
             </div>
@@ -41,45 +41,79 @@
             <img class="van-bau vehicle" id="van-bau" src="./assets/images/img-bau.png" alt="Van-Bau">
             <img class="treiller-foodtruck vehicle" id="food-truck" src="./assets/images/img-trailler.png" alt="Food Truck">
             <div class="small-window" id="small-window">
-                <h3>Escolha o tipo de custo:</h3>
+                <h4>Escolha o tipo de custo:</h4>
                 <button class="option-btn" data-value="daily">Custo por Diária</button>
                 <button class="option-btn" data-value="hourly">Custo por Hora</button>
             </div>
         </div>
         <div class="formulario">
 
-          <form id="form1">
-            <label for="placa">Placa</label> <p>
-            <input type="text" id="placa" placeholder="___-___">
-          </form>
-
-          <form id="form2">
-            <label for="tarifa">Tarifa</label> <p>
-            <input type="text" id="tarifa" placeholder="">
-          </form>
-
-          <form id="form3">
-            <label for="obseracoes">Observações</label> <p>
-            <input type="text" id="observacoes" placeholder="">
-          </form>
-          
-        </div>
-        <div class="input-vagas">
-          <button class="botao-cadastrar" type="button"> Cadastrar</button>
-          <label for="quantidade-vagas">Vagas</label>
-          <input type="text" id="vagas">
-        </div>
-        <div class="tabela">
+          <form id="form">
+            <div class="form-class" >
+                <label for="placa">Placa</label> <p>
+                <input type="text" id="placa" placeholder="___-___">
+            </div>          
             
-        </div>      
-        <div class="rodape">
-            <div class="parceiros">
-                <img class="img-senac" src="./assets/images/img-senac-logo.png" alt="">
-                <img class="img-jc" src="./assets/images/img-jc.png" alt="">
+            <div class="form-class" > 
+                <label for="tarifa">Tarifa</label> <p>
+                <input type="text" id="tarifa" placeholder="">
             </div>
             
-            <div class="endereco"></div>
-            <div class="sobre"></div>
+            <div class="form-class" >
+                <label for="obseracoes">Observações</label> <p>
+                <input type="text" id="observacoes" placeholder="">
+            </div>
+            
+          </form>
+        </div>
+
+        <div class="input-vagas">
+          <button class="botao" type="button"> Cadastrar</button>
+          <label for="quantidade-vagas">Vagas: </label>
+          <input type="text" id="vagas">
+        </div>
+
+        <div id="tabela">
+            <table id="tabelaVeiculos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Placa</th>
+                        <th>Entrada</th>
+                        <th>Tarifa</th>
+                        <th>Observações</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>      
+        <div id="rodape">
+
+            <div id="img-senac"> 
+                <h4>Parceiros:</h4>
+                <img class="img-senac" src="./assets/images/img-senac-logo.png" alt="" width="100" height="64">
+            </div>
+            
+            <div id="img-jc">
+                <img class="img-jc" src="./assets/images/img-jc.png" alt="" width="68" height="50">
+            </div>
+
+            <div id="endereco">
+                <h3>Endereço:</h3>
+                <p>Avenida Senador Belgadro 500 - Joinville</p>
+                <p>Natal-RN  59048300</p>
+                <p>Tel: 84 981823632
+                </p>
+            </div>
+
+            <div id="sobre">
+                <h4>Sobre</h4>
+                <h4>Termo de uso</h4>
+                <h4>Anuncie conosco</h4>
+                <h4>Política de privacidade</h4>
+            </div>
         </div>
     </div>
     <script src="./assets/js/estacionamento.js"></script>

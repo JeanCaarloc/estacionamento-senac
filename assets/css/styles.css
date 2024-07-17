@@ -45,9 +45,11 @@ body {
     flex-direction: row;
     width: 800px;
     height: 35px;
-    border: 1px solid rgb(12, 12, 12);
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,1);
 }
 
 .menu-esquerdo{
@@ -73,7 +75,8 @@ body {
 }
 
 .titulo{
-    font-family: 'Irish Grover';font-size: 22px;
+    font-family: 'Irish Grover';
+    font-size: 22px;
     background: linear-gradient(90deg, #000000, #000000,#dfd2b7, #000000, #f0a50e, #F69A10,#000000, #000000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -96,6 +99,7 @@ body {
     margin-top: 4px;
     border-radius: 20px;
     border: 1.5px solid;
+
 }
 
 .buscar-icon {
@@ -120,18 +124,16 @@ body {
     justify-content: space-evenly;
     width: 800px;
     height: 124px;
-    border: 1px solid red;
-    
 }
 
 .carros{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     cursor: pointer;
 }
 
 .small-window {
-    display: none;
+    display: flex;
     position: absolute;
     top: 150px;
     left: 500%;
@@ -142,13 +144,12 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1;
-    text-align: center;
     width: 230px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .option-btn {
-    display: block;
+    display: flex;
     width: 100%;
     padding: 3px;
     margin: 10px 0;
@@ -184,35 +185,164 @@ body {
 
 .formulario{
     display: flex;
+
     justify-content: space-around;
-    width: 800px;
+    width: 100%;
     height: 42px;
-    border: 1px solid red;
 }
 
+#form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#placa{
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#tarifa{
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#observacoes{
+    width: 464px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.form-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .input-vagas{
     display: flex;
-    
     width: 800px;
     height: 24px;
-    border: 1px solid red;
     justify-content: flex-end;
     align-items: center;
 }
 
-.botao-cadastrar{
-    margin-right: 170px;
+.botao{
+    margin-right: 278px;
+    border-radius: 5px;
 }
 
-.tabela{
+#vagas{
+    width: 27px;
+    height: 17px;
+    margin-right: 43px;
+}
+
+#tabela{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 800px;
     height: 271px;
-    border: 1px solid red;
+}   
+
+
+table, th, td{
+    border-collapse: collapse;
 }
 
-.rodape{
+th, td{
+    padding: 1px;
+}
+
+th{
+    background-color: #ecae50;
+    font-size: 15px;
+}
+
+#tabelaVeiculos{
+    width: 90%;
+    height: 261px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+#rodape{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     width: 800px;
     height: 105px;
-    border: 1px solid red;
+    box-shadow: 0px -1px 0px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px -1px 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px -1px 0px 0px rgba(0,0,0,1);
+}
+
+h3{
+    margin-left: 80px;
+}
+
+#img-senac{
+    margin-left: 20px
+}
+
+#img-jc{
+    margin-top: 26px;
+}
+
+#endereco{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: -20px;
+}
+
+#sobre{
+    margin-left: 150px;
+}
+
+h4,h4,p,th,button,label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
