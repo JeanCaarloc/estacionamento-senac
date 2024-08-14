@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <select id="formaPagamento">
                     <option value="Cartão">Cartão</option>
                     <option value="Dinheiro">Dinheiro</option>
+                    <option value="Pix">Pix</option>
                 </select>
                 <button id="confirmarPagamento">Confirmar</button>
             </div>
