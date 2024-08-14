@@ -161,7 +161,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+function calcularTotal() {
+    // Seleciona a tabela pelo ID
+    var tabela = custoFinal
+    var total = 0;
 
+    // Itera sobre as linhas da tabela
+    for (var i = 0; i < tabela.rows.length; i++) {
+        var row = tabela.rows[i];
+
+        // Itera sobre as células de cada linha
+        for (var j = 0; j < row.cells.length; j++) {
+            // Adiciona o valor da célula ao total
+            total += parseFloat(row.cells[j].innerText);
+        }
+    }
+
+    // Mostra o total no elemento com o ID 'total'
+    document.getElementById("total").innerText = total;
+}
 document.getElementById("button-relatorio").addEventListener("click", function() {
     const valorPago = parseFloat(document.getElementById("tarifa").value);
     adicionarValorAoCaixa(valorPago);
