@@ -9,8 +9,9 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  win.maximize()
   Menu.setApplicationMenu(Menu.buildFromTemplate(template));
-  win.loadFile('index.html')
+  win.loadFile('login.html')
 }
 
 app.whenReady().then(() => {

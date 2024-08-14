@@ -159,3 +159,37 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'block';
     }
 });
+
+
+document.getElementById("button-relatorio").addEventListener("click", function() {
+    const valorPago = parseFloat(document.getElementById("tarifa").value);
+    adicionarValorAoCaixa(valorPago);
+});
+
+// Array para armazenar os valores recebidos
+let valoresRecebidos = [];
+
+// Função para adicionar um valor ao relatório de caixa
+function adicionarValorAoCaixa(valor) {
+    const tabelaRelatorio = document.querySelector("#tabelaRelatorio tbody");
+    const novaLinha = tabelaRelatorio.insertRow();
+
+    const data = new Date().toLocaleDateString();
+    novaLinha.insertCell(0).textContent = data;
+    novaLinha.insertCell(1).textContent = `R$ ${valor.toFixed(2)}`;
+
+    valoresRecebidos.push(valor);
+    atualizarTotalCaixa();
+}
+
+// Função para atualizar o valor total recebido
+function atualizarTotalCaixa() {
+    const total = valoresRecebidos.reduce((acc, curr) => acc + curr, 0);
+    document.getElementById("totalValor").textContent = total.toFixed(2);
+}
+
+// Exemplo de uso: quando um cliente pagar, chame a função
+// Exemplo: adicionarValorAoCaixa(20.00);
+
+
+

@@ -110,6 +110,11 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+.forgot-password{
+    text-decoration: none;
+    color: #f5ca99;
+}
+
 #rodape {
     display: flex;
     justify-content: space-between;
