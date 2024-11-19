@@ -11,7 +11,7 @@ function createWindow () {
   })
   win.maximize()
   Menu.setApplicationMenu(Menu.buildFromTemplate(template));
-  win.loadFile('login.html')
+  win.loadFile('./src/html/login.html')
 }
 
 app.whenReady().then(() => {
@@ -54,3 +54,18 @@ const template = [
       ]      
   }
 ]
+
+// const firebase = require('firebase/app');
+// require('firebase/database');
+
+// const firebaseConfig = {
+//   apiKey: "SUA_CHAVE_API",
+//   authDomain: "ID_DO_SEU_PROJETO.firebaseapp.com",
+//   databaseURL: "https://ID_DO_SEU_PROJETO.firebaseio.com",
+//   projectId: "ID_DO_SEU_PROJETO",
+//   storageBucket: "ID_DO_SEU_PROJETO.appspot.com",
+//   messagingSenderId: "SEU_ID_DO_REMETENTE",
+//   appId: "SEU_ID_DO_APP"
+// };
+
+// firebase.initializeApp(firebaseConfig);
